@@ -18,4 +18,6 @@ article {
 
 button {
   margin-top: 10px;
+  background-color: green;
+  color: white;
 }
