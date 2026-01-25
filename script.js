@@ -1,6 +1,22 @@
-document.querySelectorAll(".toggle").forEach(button => {
-  button.addEventListener("click", () => {
-    const paragraph = button.previousElementSibling;
-    paragraph.classList.toggle("hidden");
+document.getElementById("loginBtn").onclick = function () {
+  document.getElementById("loginModal").style.display = "block";
+};
+
+document.getElementById("submitLogin").onclick = function () {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  fetch("login.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `username=${username}&password=${password}`
+  })
+  .then(res => res.text())
+  .then(data => {
+    if (data === "success") {
+      window.location.href = "dashboard.php";
+    } else {
+      document.getElementById("errorMsg").innerText = "Wrong login!";
+    }
   });
-});
+};
