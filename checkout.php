@@ -4,3 +4,10 @@ if (!isset($_SESSION['loggedin'])) {
     header("Location: index.php"); // redirect to login
     exit;
 }
+
+
+<?php
+session_start();
+session_destroy(); // log out
+header("Location: index.php");
+exit;
