@@ -1,28 +1,54 @@
+<?php
+session_start();
 
-
+$posts = [
+  [
+    "title" => "Welcome to My Blog",
+    "content" => "This is my first post."
+  ],
+  [
+    "title" => "Learning PHP",
+    "content" => "PHP runs on the server."
+  ]
+];
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Mini Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: white; font-family: sans-serif; }
+    button { background: blue; color: white; padding: 18px; }
+    #loginModal { display: none; border: 1px solid #80aeff; padding: 20px; }
+    header { background: #333; color: white; padding: 20px; }
+    article { background: yellow; margin: 20px; padding: 15px; border-radius: 5px; }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>My Mini Blog</h1>
 </header>
-<button id="loginBtn">Login</button>
-<button>Signup</button>
-<button>Back</button>
 
-<div id="loginModal" style="display:none">
+<button id="loginBtn">Login</button>
+<button onclick="window.history.back()">Back</button>
+
+<div id="loginModal">
   <input id="username" placeholder="Username">
   <input id="password" type="password" placeholder="Password">
   <button id="submitLogin">Submit</button>
   <p id="errorMsg"></p>
 </div>
 
-<script src="script.js"></script>
+<main>
+  <?php foreach ($posts as $post): ?>
+    <article>
+      <h2><?= $post["title"]; ?></h2>
+      <p><?= $post["content"]; ?></p>
+    </article>
+  <?php endforeach; ?>
+</main>
+
 <script src="script.js"></script>
 </body>
 </html>
