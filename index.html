@@ -15,7 +15,7 @@ $posts = [
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mini Blog</title>
+  <title>Simple Page</title>
   <style>
     body { background: white; font-family: sans-serif; }
     button { background: blue; color: white; padding: 18px; }
@@ -27,11 +27,13 @@ $posts = [
 <body>
 
 <header>
-  <h1>My Mini Blog</h1>
+  <h1>Simple Page</h1>
 </header>
 
 <button id="loginBtn">Login</button>
-<button onclick="window.history.back()">Back</button>
+<!--
+  <button onclick="window.history.back()">Back</button>
+  -->
 
 <div id="loginModal">
   <input id="username" placeholder="Username">
@@ -40,6 +42,9 @@ $posts = [
   <p id="errorMsg"></p>
 </div>
 
+
+
+  
 <main>
   <?php foreach ($posts as $post): ?>
     <article>
