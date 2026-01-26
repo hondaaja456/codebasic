@@ -15,6 +15,13 @@ function login($username, $password) {
 }
 
 
+if (login($username, $password)) {
+    echo "Login successful!";
+} else {
+    echo "Invalid credentials.";
+}
+
+
 
 
 //goes to dashboard php or index php, checkout php, profile php because needed to confirmed whetner its login or not for checking
