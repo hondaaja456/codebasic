@@ -30,6 +30,23 @@ $posts = [
   <h1>Simple Page</h1>
 </header>
 
+
+
+  <!-- JS, use this code if your login page didnt got involved in js  so in username input and password it doesnt need id  -->
+<!-- CSS, if css somewhat gets involved you might use class in "input class name" and in css dont need to use hastag but use dot.   -->
+  <!-- <?php if (isset($_SESSION['loggedin'])): ?>
+  <p>You are already logged in.</p>
+  <a href="dashboard.php">Go to Dashboard</a>
+<?php else: ?>
+  <form action="login.php" method="POST">
+    <input name="username" placeholder="Username" required>
+    <br><br>
+    <input name="password" type="password" placeholder="Password" required>
+    <br><br>
+    <button type="submit">Login</button>
+  </form> -->
+
+
 <button id="loginBtn">Login</button>
 <!--
   <button onclick="window.history.back()">Back</button>
@@ -39,7 +56,9 @@ $posts = [
   <input id="username" placeholder="Username">
   <input id="password" type="password" placeholder="Password">
   <button id="submitLogin">Submit</button>
-  <p id="errorMsg"></p>
+  <p id="errorMsg" style="color: red;">
+   
+</p>
 </div>
 
 
