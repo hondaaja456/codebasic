@@ -13,3 +13,14 @@ function login($username, $password) {
 
     return false;
 }
+
+
+
+
+//goes to dashboard php or index php, checkout php, profile php because needed to confirmed whetner its login or not for checking
+if (!isset($_SESSION['loggedin'])) {
+    header("Location: index.php");
+    exit;
+}
+
+
