@@ -72,16 +72,10 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 // if (login($username, $password)) {
-//     // Jump to dashboard echo "You are already logged in"
 //     header("Location: dashboard.php");
 //     exit;
 // } else {
-//     // POP-UP LOGIC:
-//     // We stop the PHP redirect and use JS to show the alert
-//     echo "<script>
-//         alert('Your login info is incorrect. Please try again.');
-//         window.location.href = 'index.php';
-//     </script>";
+//     header("Location: index.php?error=1");
 //     exit;
 // }
 
