@@ -58,6 +58,16 @@ $posts = [
   <button onclick="window.history.back()">Back</button>
   -->
 
+
+<div class="container">
+  <h1>Login</h1>
+  
+  <?php if (isset($_GET['error'])): ?>
+  <div class="error">
+    Incorrect username or password. Please try again.
+  </div>
+<?php endif; ?>
+
 <div id="loginModal">
   <input id="username" name="username" placeholder="Username">
   <input id="password" name="password" type="password" placeholder="Password">
@@ -65,12 +75,7 @@ $posts = [
   <p id="errorMsg" style="color:red;"></p>
 </div>
 
-  <?php if (isset($_GET['error'])): ?>
-  <div class="error">
-    Incorrect username or password. Please try again.
-  </div>
-<?php endif; ?>
-
+</div>
 
    <?php if (isset($_GET['error'])): ?>
     <p style="color: red;">
