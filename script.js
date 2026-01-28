@@ -1,10 +1,11 @@
 document.getElementById("loginBtn").onclick = function () {
-};
-function openModal() {
   document.getElementById("loginModal").style.display = "block";
+};
+
+
+function closeModal() {
+  document.getElementById("loginModal").style.display = "none";
 }
-
-
 
 
 document.getElementById("submitLogin").onclick = function () {
