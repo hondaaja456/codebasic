@@ -15,8 +15,11 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
 
 <h1>Dashboard</h1>
-
-<p>Welcome, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></p>
+<div class="dashboard">
+  <h1>Dashboard</h1>
+  <p>Welcome, <strong><?php echo htmlspecialchars($_SESSION['username']); ?></strong></p>
+  <a class="logout" href="logout.php">Logout</a>
+</div>
 
 <a href="logout.php">Logout</a>
 
