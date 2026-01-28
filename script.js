@@ -1,6 +1,11 @@
 document.getElementById("loginBtn").onclick = function () {
-  document.getElementById("loginModal").style.display = "block";
 };
+function openModal() {
+  document.getElementById("loginModal").style.display = "block";
+}
+
+
+
 
 document.getElementById("submitLogin").onclick = function () {
   const username = document.getElementById("username").value;
