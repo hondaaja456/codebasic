@@ -28,6 +28,16 @@ if (login($username, $password)) {
 
 
 
+// password login with hash (security)
+// $password = $_POST['password'];
+// $storedHash = $user['password'];
+
+// if (password_verify($password, $storedHash)) {
+//     $_SESSION['user_id'] = $user['id'];
+// } else {
+//     echo "Invalid login";
+// }
+
 //confirmation only!
 //goes to dashboard php or index php, checkout php, profile php because needed to confirmed whetner its login or not for checking
 if (!isset($_SESSION['loggedin'])) {
