@@ -21,7 +21,6 @@ if (!isset($_SESSION['loggedin'])) {
   <a class="logout" href="logout.php">Logout</a>
 </div>
 
-<a href="logout.php">Logout</a>
 
 </body>
 </html>
