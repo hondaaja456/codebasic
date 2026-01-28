@@ -59,8 +59,7 @@ $posts = [
   -->
 
 
-<div class="container">
-  <h1>Login</h1>
+
   
   <?php if (isset($_GET['error'])): ?>
   <div class="error">
@@ -69,6 +68,8 @@ $posts = [
 <?php endif; ?>
 
 <div id="loginModal" class="modaL">
+  <div class="container">
+  <h1>Login</h1>
   <input id="username" name="username" placeholder="Username">
   <input id="password" name="password" type="password" placeholder="Password">
   <button id="submitLogin">Submit</button>
