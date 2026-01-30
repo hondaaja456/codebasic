@@ -26,3 +26,31 @@ document.getElementById("submitLogin").onclick = function () {
     }
   });
 };
+
+
+
+
+
+
+
+
+
+// this code is used if you re planning to redirect to php and needed security 
+// document.getElementById("loginForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   const formData = new FormData(this);
+
+//   fetch("login.php", {
+//     method: "POST",
+//     body: formData
+//   })
+//   .then(res => res.text())
+//   .then(data => {
+//     if (data === "success") {
+//       window.location.href = "dashboard.php";
+//     } else {
+//       document.getElementById("msg").innerText = "Invalid login";
+//     }
+//   });
+// });
