@@ -1,12 +1,18 @@
 <?php
-session_start();
+
 
 
 session_set_cookie_params([
     'httponly' => true,
     'secure' => true,      // Only over HTTPS
-    'samesite' => 'Strict'
+    'samesite' => 'Strict' //use this code for heavy security for sensitive data like banking, admin panel, internal tools
+  // 'samesite' => 'Lax'//use this code is more ux friendly like maybe not too sensitive case like normal login, public site
 ]);
+
+
+session_start();
+
+
 
 // Generate CSRF token if not exists
 if (empty($_SESSION['csrf_token'])) {
